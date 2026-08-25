@@ -1,21 +1,21 @@
 {
-  "prefix": "!",
-  "guild_id": "YOUR_GUILD_ID_HERE",
+  "prefix": "t!",
+  "guild_id": "1431752582313021634",
   "database": {
     "type": "sqlite",
     "sqlite_path": "data/tickets.db"
   },
   "ticket_settings": {
     "max_open_tickets_per_user": 1,
-    "channel_name_format": "ticket-{user}-{id}",
+    "channel_name_format": "🎫-{user}-{id}",
     "auto_close_enabled": true,
-    "default_auto_close_hours": 48,
-    "delete_on_close": false,
+    "default_auto_close_hours": null,
+    "delete_on_close": true,
     "archive_category_id": null
   },
   "logs": {
-    "ticket_open": "OPEN_LOG_CHANNEL_ID_HERE",
-    "ticket_close": "CLOSE_LOG_CHANNEL_ID_HERE"
+    "ticket_open": "1431752584154189833",
+    "ticket_close": "1501948236863377609"
   },
   "transcript": {
     "enabled": true,
@@ -29,13 +29,13 @@
     "send_transcript": true
   },
   "embed_settings": {
-    "color": "#5865F2",
-    "footer_text": "Ticket System",
+    "color": "#8c0303",
+    "footer_text": "Warrior Ticket System",
     "footer_icon": null
   },
   "bot": {
     "activity_type": "watching",
-    "activity_text": "tickets",
+    "activity_text": "System is Private",
     "debug_mode": false
   },
   "commands": {
