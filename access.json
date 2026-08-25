@@ -1,8 +1,6 @@
 {
-  "ticket_admin_role": "TICKET_ADMIN_ROLE_ID_HERE",
+  "ticket_admin_role": "1431752582656688169",
   "support_roles": {
-    "SUPPORT_ROLE_ID_1": [1, 2],
-    "SUPPORT_ROLE_ID_2": [3],
-    "SUPPORT_ROLE_ID_3": [4]
+    "1431752582313021640": [1, 2],
   }
 }
