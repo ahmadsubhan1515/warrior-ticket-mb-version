@@ -1,3 +1,6 @@
+"""
+Advanced Discord Ticket Bot - Main Entry Point
+"""
 
 import asyncio
 import os
@@ -44,6 +47,8 @@ class TicketBot(commands.Bot):
         self.db = None
         self.recovery_service = None
         self.ticket_service = None
+        self.duration_service = None
+        self.transcript_service = None
         
     async def setup_hook(self):
         """Setup hook called before bot starts"""
@@ -88,7 +93,7 @@ class TicketBot(commands.Bot):
         from views.ticket_controls import TicketControlsView
         
         self.add_view(TicketPanelView(self))
-        self.add_view(TicketControlsView(self))
+        self.add_view(TicketControlsView(self, "dummy"))
         logger.info("Persistent views registered")
         
         # Run recovery process
