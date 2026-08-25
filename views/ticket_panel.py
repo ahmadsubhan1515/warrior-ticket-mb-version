@@ -19,18 +19,42 @@ class TicketPanelView(discord.ui.View):
         options = self._create_dropdown_options()
         if options:
             self.add_item(TicketTypeDropdown(self.bot, options))
+        else:
+            logger.warning("No dropdown options found in configuration")
     
     def _create_dropdown_options(self) -> List[discord.SelectOption]:
         """Create dropdown options from config"""
         options = []
-        for ticket_option in self.bot.config.get_ticket_options():
-            option = discord.SelectOption(
-                label=ticket_option['name'][:100],
-                value=str(ticket_option['id']),
-                description=ticket_option.get('description', '')[:100],
-                emoji=ticket_option.get('emoji') if ticket_option.get('emoji') else None
-            )
-            options.append(option)
+        try:
+            ticket_options = self.bot.config.get_ticket_options()
+            
+            if not ticket_options:
+                logger.warning("No ticket options found in dropdownoption.json")
+                return options
+            
+            for ticket_option in ticket_options:
+                try:
+                    # Validate required fields
+                    if 'name' not in ticket_option or 'id' not in ticket_option:
+                        logger.warning(f"Missing required fields in option: {ticket_option}")
+                        continue
+                    
+                    # Create SelectOption
+                    option = discord.SelectOption(
+                        label=str(ticket_option['name'])[:100],
+                        value=str(ticket_option['id']),
+                        description=str(ticket_option.get('description', ''))[:100] if ticket_option.get('description') else None,
+                        emoji=ticket_option.get('emoji') if ticket_option.get('emoji') else None
+                    )
+                    options.append(option)
+                    
+                except Exception as e:
+                    logger.error(f"Error creating option for {ticket_option}: {e}")
+                    continue
+                    
+        except Exception as e:
+            logger.error(f"Error creating dropdown options: {e}", exc_info=True)
+        
         return options
 
 
@@ -93,4 +117,4 @@ class TicketTypeDropdown(discord.ui.Select):
             await interaction.followup.send("Invalid ticket option selected.", ephemeral=True)
         except Exception as e:
             logger.error(f"Dropdown callback error: {e}", exc_info=True)
-            await interaction.followup.send("An error occurred while creating your ticket.", ephemeral=True)
+            await interaction.followup.send(f"An error occurred: {str(e)}", ephemeral=True)
