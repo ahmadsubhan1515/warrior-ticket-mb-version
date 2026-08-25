@@ -1,0 +1,35 @@
+{
+  "title": "🎫 Support Center",
+  "description": "Welcome to our support center!\nPlease select a ticket type below to get started.",
+  "color": "#5865F2",
+  "image": null,
+  "thumbnail": null,
+  "footer": {
+    "text": "We typically respond within 24 hours",
+    "icon_url": null
+  },
+  "author": {
+    "name": "Support Team",
+    "icon_url": null,
+    "url": null
+  },
+  "dropdown": {
+    "placeholder": "🔍 Select a ticket type...",
+    "min_values": 1,
+    "max_values": 1,
+    "disabled": false
+  },
+  "button": {
+    "label": "Create Ticket",
+    "emoji": "🎫",
+    "style": "primary",
+    "disabled": false
+  },
+  "fields": [
+    {
+      "name": "📌 Important",
+      "value": "Please provide as much detail as possible for faster assistance.",
+      "inline": false
+    }
+  ]
+}
