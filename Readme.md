@@ -29,6 +29,7 @@ A production-ready, fully functional Discord Ticket Bot built with Python and di
 ```bash
 git clone <your-repo-url>
 cd discord-ticket-bot
+```
 
 ```
 discord-ticket-bot/
