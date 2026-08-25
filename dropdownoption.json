@@ -2,35 +2,59 @@
   "options": [
     {
       "id": 1,
-      "name": "General Support",
-      "description": "Get help with general inquiries",
-      "emoji": "🎫",
-      "category_id": "GENERAL_SUPPORT_CATEGORY_ID_HERE",
+      "name": "Buy Now",
+      "description": "Warrior Premium Products",
+      "emoji": "🔸️",
+      "category_id": "1431752583801995389",
       "support_roles": []
     },
     {
       "id": 2,
-      "name": "Purchase Support",
-      "description": "Issues related to purchases and payments",
-      "emoji": "💳",
-      "category_id": "PURCHASE_SUPPORT_CATEGORY_ID_HERE",
-      "support_roles": []
+      "name": "Support",
+      "description": "Get General Support in Any Issue.",
+      "emoji": "🔸️",
+      "category_id": "1431752583957188694",
+      "support_roles": [1431752582313021640]
     },
     {
       "id": 3,
-      "name": "Report Player",
-      "description": "Report a player for rule violations",
-      "emoji": "⚠️",
-      "category_id": "REPORT_CATEGORY_ID_HERE",
+      "name": "Join Reseller Team",
+      "description": "Become a Official Seller of Warrior Team.",
+      "emoji": "🔸️",
+      "category_id": "1431752583957188696",
       "support_roles": []
     },
     {
       "id": 4,
-      "name": "Partnership",
-      "description": "Discuss partnership opportunities",
-      "emoji": "🤝",
-      "category_id": "PARTNERSHIP_CATEGORY_ID_HERE",
+      "name": "Hwid Reset",
+      "description": "Reset Your Keys Hardware ID.",
+      "emoji": "🔸️",
+      "category_id": "1431752583957188697",
       "support_roles": []
     }
+    {
+      "id": 5,
+      "name": "Join Reseller Team",
+      "description": "Become a Official Seller of Warrior Team.",
+      "emoji": "🔸️",
+      "category_id": "1431752583957188696",
+      "support_roles": []
+    },
+    {
+      "id": 6,
+      "name": "Join Team",
+      "description": "Join our CREATORE/STREAMER Team.",
+      "emoji": "🔸️",
+      "category_id": "1431752583957188699",
+      "support_roles": [1431752582313021640]
+    },
+    {
+      "id": 7,
+      "name": "Key Recover",
+      "description": "Only for Lifetime Customers.",
+      "emoji": "🔸️",
+      "category_id": "1431752583957188698",
+      "support_roles": []
+    },
   ]
 }
