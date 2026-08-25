@@ -31,7 +31,7 @@ class TicketCommands(commands.Cog):
         admin_role_id = self.bot.config.get_ticket_admin_role()
         return PermissionChecker.is_admin(ctx.author, admin_role_id)
     
-    @commands.command(name="ticketpanel")
+    @commands.command(name="ticketpanel", aliases=["ticket"])
     @commands.has_permissions(manage_channels=True)
     async def ticket_panel(self, ctx: commands.Context):
         """Send the ticket panel to the current channel"""
@@ -60,11 +60,6 @@ class TicketCommands(commands.Cog):
         except Exception as e:
             logger.error(f"Failed to send ticket panel: {e}", exc_info=True)
             await ctx.send("Failed to send ticket panel. Please check the configuration.")
-    
-    @commands.command(name="ticketpanel")
-    async def ticket_panel_alias(self, ctx: commands.Context):
-        """Alias for ticketpanel command"""
-        await self.ticket_panel(ctx)
     
     @commands.command(name="ticketsetup")
     @commands.has_permissions(administrator=True)
@@ -108,7 +103,7 @@ class TicketCommands(commands.Cog):
             logger.error(f"Ticket setup error: {e}", exc_info=True)
             await ctx.send("Failed to setup ticket system.")
     
-    @commands.command(name="tickets")
+    @commands.command(name="tickets", aliases=["mytickets"])
     async def list_tickets(self, ctx: commands.Context):
         """List your active tickets"""
         try:
@@ -149,7 +144,7 @@ class TicketCommands(commands.Cog):
             logger.error(f"List tickets error: {e}", exc_info=True)
             await ctx.send("Failed to list tickets.")
     
-    @commands.command(name="ticketadd")
+    @commands.command(name="ticketadd", aliases=["adduser"])
     @commands.has_permissions(manage_channels=True)
     async def ticket_add(self, ctx: commands.Context, user: discord.Member, ticket_id: Optional[str] = None):
         """Add a user to a ticket"""
@@ -183,7 +178,7 @@ class TicketCommands(commands.Cog):
             logger.error(f"Ticket add error: {e}", exc_info=True)
             await ctx.send("Failed to add user to ticket.")
     
-    @commands.command(name="ticketremove")
+    @commands.command(name="ticketremove", aliases=["removeuser"])
     @commands.has_permissions(manage_channels=True)
     async def ticket_remove(self, ctx: commands.Context, user: discord.Member, ticket_id: Optional[str] = None):
         """Remove a user from a ticket"""
@@ -217,9 +212,9 @@ class TicketCommands(commands.Cog):
             logger.error(f"Ticket remove error: {e}", exc_info=True)
             await ctx.send("Failed to remove user from ticket.")
     
-    @commands.command(name="ticketclose")
+    @commands.command(name="ticketclose", aliases=["close"])
     @commands.has_permissions(manage_channels=True)
-    async def ticket_close(self, ctx: commands.Context, reason: Optional[str] = "Manual close"):
+    async def ticket_close(self, ctx: commands.Context, *, reason: Optional[str] = "Manual close"):
         """Close a ticket"""
         try:
             # Get ticket from current channel
