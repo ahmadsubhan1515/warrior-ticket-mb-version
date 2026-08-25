@@ -80,5 +80,7 @@ class Events(commands.Cog):
         await ErrorHandler.handle_command_error(ctx, error)
 
 
+# IMPORTANT: This setup function is required for the cog to load
 async def setup(bot):
+    """Setup function for loading the cog"""
     await bot.add_cog(Events(bot))
