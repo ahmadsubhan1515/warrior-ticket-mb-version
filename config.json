@@ -1,0 +1,48 @@
+{
+  "prefix": "!",
+  "guild_id": "YOUR_GUILD_ID_HERE",
+  "database": {
+    "type": "sqlite",
+    "sqlite_path": "data/tickets.db"
+  },
+  "ticket_settings": {
+    "max_open_tickets_per_user": 1,
+    "channel_name_format": "ticket-{user}-{id}",
+    "auto_close_enabled": true,
+    "default_auto_close_hours": 48,
+    "delete_on_close": false,
+    "archive_category_id": null
+  },
+  "logs": {
+    "ticket_open": "OPEN_LOG_CHANNEL_ID_HERE",
+    "ticket_close": "CLOSE_LOG_CHANNEL_ID_HERE"
+  },
+  "transcript": {
+    "enabled": true,
+    "format": "html",
+    "save_local": true,
+    "send_to_dm": true,
+    "send_to_logs": true
+  },
+  "dm_settings": {
+    "enabled": true,
+    "send_transcript": true
+  },
+  "embed_settings": {
+    "color": "#5865F2",
+    "footer_text": "Ticket System",
+    "footer_icon": null
+  },
+  "bot": {
+    "activity_type": "watching",
+    "activity_text": "tickets",
+    "debug_mode": false
+  },
+  "commands": {
+    "ticket_panel": "ticketpanel",
+    "ticket_setup": "ticketsetup",
+    "ticket_add": "ticketadd",
+    "ticket_remove": "ticketremove",
+    "ticket_close": "ticketclose"
+  }
+}
