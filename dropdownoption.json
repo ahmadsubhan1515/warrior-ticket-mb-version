@@ -1,0 +1,36 @@
+{
+  "options": [
+    {
+      "id": 1,
+      "name": "General Support",
+      "description": "Get help with general inquiries",
+      "emoji": "🎫",
+      "category_id": "GENERAL_SUPPORT_CATEGORY_ID_HERE",
+      "support_roles": []
+    },
+    {
+      "id": 2,
+      "name": "Purchase Support",
+      "description": "Issues related to purchases and payments",
+      "emoji": "💳",
+      "category_id": "PURCHASE_SUPPORT_CATEGORY_ID_HERE",
+      "support_roles": []
+    },
+    {
+      "id": 3,
+      "name": "Report Player",
+      "description": "Report a player for rule violations",
+      "emoji": "⚠️",
+      "category_id": "REPORT_CATEGORY_ID_HERE",
+      "support_roles": []
+    },
+    {
+      "id": 4,
+      "name": "Partnership",
+      "description": "Discuss partnership opportunities",
+      "emoji": "🤝",
+      "category_id": "PARTNERSHIP_CATEGORY_ID_HERE",
+      "support_roles": []
+    }
+  ]
+}
