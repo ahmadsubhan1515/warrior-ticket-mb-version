@@ -1,3 +1,4 @@
+```
 discord-ticket-bot/
 ├── main.py
 ├── requirements.txt
@@ -37,3 +38,4 @@ discord-ticket-bot/
 ├── data/
 │   └── tickets.db
 └── transcripts/
+```
