@@ -3,7 +3,7 @@
   "description": "Welcome to our tickets center!\nPlease select a ticket type below to get started.",
   "color": "#8f0404",
   "image": null,
-  "thumbnail": true,
+  "thumbnail": null,
   "footer": {
     "text": "DEVELOPED BY SUBHAN",
     "icon_url": null
