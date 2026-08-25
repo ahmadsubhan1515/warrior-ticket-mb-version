@@ -9,7 +9,7 @@
     "max_open_tickets_per_user": 1,
     "channel_name_format": "🎫-{user}-{id}",
     "auto_close_enabled": true,
-    "default_auto_close_hours": null,
+    "default_auto_close_hours": 9999,
     "delete_on_close": true,
     "archive_category_id": null
   },
